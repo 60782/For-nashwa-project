@@ -34,7 +34,10 @@ function fadeInAudio(audio, duration = 4000) {
 nextBtn.addEventListener('click', () => {
     step++;
 
-    if (step === 3) fadeInAudio(loveSong);
+    if (step === 1) {
+        loveSong.currentTime = 0;
+        fadeInAudio(loveSong);
+    }
 
     if (step <= screens.length) {
         content.style.animation = 'none';
